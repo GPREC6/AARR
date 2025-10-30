@@ -1,0 +1,23 @@
+<h1>Registration</h1>
+
+<form (ngSubmit)="submit()">
+  <input type="text" name="fname" [(ngModel)]="user.fname" placeholder="FirstName" />
+  <pre></pre>
+  <input type="text" name="lname" [(ngModel)]="user.lname" placeholder="LastName" />
+  <pre></pre>
+  <input type="email" name="email" [(ngModel)]="user.email" placeholder="Email" />
+  <pre></pre>
+  <input type="password" name="password" [(ngModel)]="user.password" placeholder="Password" />
+  <pre></pre>
+
+  <button type="submit">Submit</button>
+</form>
+
+<div class="result">
+  <h1>All Users</h1>
+  <ul>
+    <li *ngFor="let a of users">
+      {{ a.fname }}
+    </li>
+  </ul>
+</div>

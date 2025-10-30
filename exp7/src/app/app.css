@@ -1,0 +1,40 @@
+/* Basic layout and navigation styles for improved clarity and responsiveness */
+.app-sidenav-container {
+  height: 100vh;
+}
+.top-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.sidenav-toolbar {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+}
+.app-title {
+  margin-left: 12px;
+  font-weight: 600;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.content {
+  padding: 16px;
+}
+.mat-list .mat-list-item .mat-icon {
+  margin-right: 12px;
+}
+a.mat-list-item.active {
+  background: rgba(0,0,0,0.08);
+}
+.link-text {
+  margin-left: 8px;
+}
+/* Responsive: collapse sidenav on small widths */
+@media (max-width: 767px) {
+  .app-sidenav .mat-drawer-inner-container {
+    width: 240px;
+  }
+}

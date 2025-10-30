@@ -1,0 +1,33 @@
+<mat-sidenav-container class="app-sidenav-container">
+  <mat-sidenav #slide class="app-sidenav" mode="side" [(opened)]="opened" aria-label="Main navigation">
+    <mat-toolbar color="primary" class="sidenav-toolbar"></mat-toolbar>
+    <mat-nav-list role="navigation" aria-label="Primary">
+      <a mat-list-item routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="slide.close()" aria-label="Go to Home"> 
+        <mat-icon aria-hidden="true"></mat-icon>
+        <span class="link-text"></span>
+      </a>
+      <a mat-list-item routerLink="/about" routerLinkActive="active" (click)="slide.close()" aria-label="Go to About">
+        <mat-icon aria-hidden="true"></mat-icon>
+        <span class="link-text"></span>
+      </a>
+      <a mat-list-item routerLink="/contact" routerLinkActive="active" (click)="slide.close()" aria-label="Go to Contact">
+        <mat-icon aria-hidden="true"></mat-icon>
+        <span class="link-text"></span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="top-toolbar">
+      <button mat-icon-button (click)="slide.toggle()" aria-label="Toggle menu">
+        <mat-icon></mat-icon>
+      </button>
+      <span class="app-title"></span>
+      <span class="spacer"></span>
+    </mat-toolbar>
+
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
